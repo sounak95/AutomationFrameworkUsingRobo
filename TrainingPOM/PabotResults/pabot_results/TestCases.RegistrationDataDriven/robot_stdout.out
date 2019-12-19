@@ -1,0 +1,16 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.RegistrationDataDriven :: Registering in the application            
+==============================================================================
+TC1                                                                   | PASS |
+------------------------------------------------------------------------------
+TestCases.RegistrationDataDriven :: Registering in the application    | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  D:\workspace1\TrainingPOM\PabotResults\pabot_results\TestCases.RegistrationDataDriven\output.xml

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="GenericLib" type="library" format="ROBOT" generated="20191219 23:00:46">
+<version>3.0</version>
+<scope>test case</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``GenericLib``.</doc>
+<kw name="Execute Keyword With Multiple Data">
+<arguments>
+<arg>templateName</arg>
+<arg>dataSet</arg>
+<arg>datarow=None</arg>
+<arg>sheetName=Sheet1</arg>
+<arg>continue_on_failure=true</arg>
+<arg>show_report=false</arg>
+<arg>show_list_of_column_names=[]</arg>
+</arguments>
+<doc>| Usage |
+ This keyword is used to run template with multiple data.
+
+ Data to template is passed either from an external file or directly using data dictionary or list of data dictionary from testcase to this keyword.
+
+ It supports different format for an external file like: csv, txt, xlsx, xls.
+
+ To run particular row data : Add 'rowid' column in dataSet file that contains ID(1,2,3..) for row data.
+
+ By default, this keyword will take all row data present in the given 'dataSet' file.To run particular row, set 'datarow' parameter.
+
+ Note: Please avoid using "." in column names as this keyword will ignore the text that comes after "." in column names
+
+ | Arguments |
+
+ 'templateName' : Keyword name.
+
+ 'dataSet'      : Data file or data dictionary or list of data dictionary.
+
+ 'datarow'[Optional]      :
+
+                         1. To pass single row data : datarow=RowID   [Example: datarow=2]
+
+                         2. To pass multiple random row data : datarow=RowID1,RowID2..   [Example: datarow=2,6,8,3]
+
+                         3. To pass row present in some range : datarow=RowID1-RowID4   [Example: datarow=10-15]
+
+ 'sheetName'[Optional] : If 'dataSet' is an xlsx or xls file with different sheet name then pass data sheet name.
+
+ 'continue_on_failure' [Optional] : If keyword fails for some row and you do not want to continue with remaining rows then set continue_on_failure to false.
+                                    By default, it is set to 'true'
+
+ 'show_report' [Optional] : By setting this argument to 'true', it allows user to see the Execution Report for 'rowid' and 'status' columns in html format on the log.html file.
+                            By default, it is set to 'false'. Usage is shown in example 7 and 8.
+
+ 'show_list_of_column_names' [Optional] : This option allows users to pass the columns names from dataSet, which are to be added in the Execution Report in the form of a list.
+                                          Once passed as a list, the column names are shown after 'rowid' and 'status' columns in the Execution Report.
+                                          Usage is shown in example 8.
+
+ * External file data format :
+
+ 1. CSV file : data are separated by comma. First row has parameter name stored like 'ID','Branch'...etc and from second row start storing rows of data for respective parameter.
+
+ 2. Text file : data can be separated by comma,semicolon or tab.
+
+  First line should have 'sep' parameter like sep=; or sep=, or sep=tab. Second line has parameter name stored like 'ID','Branch'...etc and from third line start storing data separated by 'sep' parameter for respective parameter.
+
+ 3. Excel file(xls or xlsx): First row has parameter name.Start storing data from second row.
+
+ Note: In Order to skip any error related to Column not found in the data sheet and continue the execution, declare a variable
+        named skip_error in a python file containing the substring of the error string that's common to all the fields
+         and import that file in the "Variables" section of the test case.
+        e.g
+        skip_error = "Dictionary variable '&amp;{Alldata}' has no key"
+            in GenericConfig.py file
+
+|Example|
+
+ 1. To parse all row data present in external file :
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | sheetName=${sheetname} |
+
+ 2. To parse single row data present in external file, pass particular row id to 'datarow' parameter:
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=23| sheetName=${sheetname} |
+
+ 3. To parse multiple row data present in external file, pass all row id to 'datarow' parameter separated by ','
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=23,25,78| sheetName=${sheetname} |
+
+ 4. To parse range of row data present in external file, pass starting row id and end row id to 'datarow' parameter separated by '-'
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=20-25| sheetName=${sheetname} |
+
+ 5. To parse range of row data present in external file and do not continue if any datarow fails.
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=20-25| sheetName=${sheetname} | continue_on_failure=false |
+
+ 6. To parse dictionary data :
+
+ *** Variable ***
+ |&amp;{dataDict}| name=xyz | ID=234 |
+
+ *** TestCases ***
+ |Mx Execute Template With Multiple Data| Template_name | ${dataDict} |
+
+ 7. To show Execution Report in log file.
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | sheetName=${sheetname} | show_report=true |
+
+ 8. To Show Execution Report with column names and column data in log file.
+
+ *** Variable ***
+ |@{ColumnDict}| URL | Username | Password |
+
+ *** TestCases ***
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | sheetName=${sheetname} | show_report=true | show_list_of_column_names=@{ColumnDict} |</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Get Differences Of Two Lists">
+<arguments>
+<arg>list1</arg>
+<arg>list2</arg>
+</arguments>
+<doc>| Usage |
+Return the difference of 2 lists.
+
+ | Arguments |
+
+list1 &amp; list2</doc>
+<tags>
+</tags>
+</kw>
+<kw name="Mx Return Value From Template">
+<arguments>
+</arguments>
+<doc>|Usage|
+ Used to return value from 'Mx Execute Template With Multiple Data' keyword if the passed template or keyword is returning any value
+
+|Example|
+ 1. If 'Mx Execute Template With Multiple Data' keyword is running for more than one row data present in dataset file then dictionary will be return with 'rowid' as the dictionary key.
+
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=120-124 | sheetName=${sheetname} |
+ |${v} | Mx Return Value From Template |
+
+ 2. If 'Mx Execute Template With Multiple Data' keyword is running for single row data present in dataset file or dictionary variable passed then this keyword will return single value
+
+ |Mx Execute Template With Multiple Data| Template_name | ${XLSXexcel_file} | datarow=120 | sheetName=${sheetname} |
+ |${v} | Mx Return Value From Template |</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>

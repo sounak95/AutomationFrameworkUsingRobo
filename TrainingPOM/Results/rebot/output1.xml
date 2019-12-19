@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.2 on win32)" generated="20191218 01:43:25.100" rpa="false">
+<suite id="s1" name="TestCases" source="D:\workspace1\TrainingPOM\TestCases">
+<suite id="s1-s1" name="LoginTest" source="D:\workspace1\TrainingPOM\TestCases\LoginTest.robot">
+<test id="s1-s1-t1" name="LoginTest">
+<kw name="Open my browser" library="LoginKeywords" type="setup">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:25.349" level="INFO">Opening browser 'firefox' to base url 'http://newtours.demoaut.com'.</msg>
+<msg timestamp="20191218 01:43:25.350" level="INFO">Firefox driver log is always forced to to: D:\workspace1\TrainingPOM\Results\geckodriver-4.log</msg>
+<status status="PASS" starttime="20191218 01:43:25.349" endtime="20191218 01:43:35.441"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191218 01:43:35.444" endtime="20191218 01:43:35.712"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:25.348" endtime="20191218 01:43:35.712"></status>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_loginUserName}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:35.717" level="INFO">Typing text 'tutorial' into text field 'name:userName'.</msg>
+<status status="PASS" starttime="20191218 01:43:35.716" endtime="20191218 01:43:35.780"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:35.715" endtime="20191218 01:43:35.781"></status>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_loginPassword}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:35.785" level="INFO">Typing text 'tutorial' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20191218 01:43:35.784" endtime="20191218 01:43:35.819"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:35.782" endtime="20191218 01:43:35.819"></status>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_signIn}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:35.821" level="INFO">Clicking button 'xpath://input[@name='login']'.</msg>
+<status status="PASS" starttime="20191218 01:43:35.821" endtime="20191218 01:43:41.375"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:35.820" endtime="20191218 01:43:41.375"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191218 01:43:44.378" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191218 01:43:41.377" endtime="20191218 01:43:44.378"></status>
+</kw>
+<kw name="Verify Successful login" library="LoginKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Passengers:</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" starttime="20191218 01:43:44.383" endtime="20191218 01:43:44.433"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Find a Flight: Mercury Tours:</arg>
+</arguments>
+<msg timestamp="20191218 01:43:44.448" level="INFO">Page title is 'Find a Flight: Mercury Tours:'.</msg>
+<status status="PASS" starttime="20191218 01:43:44.435" endtime="20191218 01:43:44.449"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:44.381" endtime="20191218 01:43:44.449"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191218 01:43:44.451" endtime="20191218 01:43:45.689"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:25.345" endtime="20191218 01:43:45.690" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191218 01:43:25.129" endtime="20191218 01:43:45.692"></status>
+</suite>
+<suite id="s1-s2" name="RegistrationTest" source="D:\workspace1\TrainingPOM\TestCases\RegistrationTest.robot">
+<test id="s1-s2-t1" name="Registration Test">
+<kw name="Open my browser" library="LoginKeywords" type="setup">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:45.705" level="INFO">Opening browser 'firefox' to base url 'http://newtours.demoaut.com'.</msg>
+<msg timestamp="20191218 01:43:45.706" level="INFO">Firefox driver log is always forced to to: D:\workspace1\TrainingPOM\Results\geckodriver-5.log</msg>
+<status status="PASS" starttime="20191218 01:43:45.705" endtime="20191218 01:43:55.728"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191218 01:43:55.730" endtime="20191218 01:43:56.000"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:45.704" endtime="20191218 01:43:56.000"></status>
+</kw>
+<kw name="Open my browser" library="LoginKeywords">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20191218 01:43:56.005" level="INFO">Opening browser 'firefox' to base url 'http://newtours.demoaut.com'.</msg>
+<msg timestamp="20191218 01:43:56.014" level="INFO">Firefox driver log is always forced to to: D:\workspace1\TrainingPOM\Results\geckodriver-6.log</msg>
+<status status="PASS" starttime="20191218 01:43:56.005" endtime="20191218 01:44:06.192"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191218 01:44:06.193" endtime="20191218 01:44:06.465"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:43:56.003" endtime="20191218 01:44:06.465"></status>
+</kw>
+<kw name="Click Register Link" library="RegistrationKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_Reg}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:06.471" level="INFO">Clicking link 'link:REGISTER'.</msg>
+<status status="PASS" starttime="20191218 01:44:06.471" endtime="20191218 01:44:07.482"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:06.468" endtime="20191218 01:44:07.482"></status>
+</kw>
+<kw name="Enter FirstName" library="RegistrationKeywords">
+<arguments>
+<arg>Abir</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_firstName}</arg>
+<arg>${firstName}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.486" level="INFO">Typing text 'Abir' into text field 'name:firstName'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.486" endtime="20191218 01:44:07.534"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.484" endtime="20191218 01:44:07.534"></status>
+</kw>
+<kw name="Enter LastName" library="RegistrationKeywords">
+<arguments>
+<arg>Roy</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_lastName}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.537" level="INFO">Typing text 'Roy' into text field 'name:lastName'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.537" endtime="20191218 01:44:07.570"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.536" endtime="20191218 01:44:07.570"></status>
+</kw>
+<kw name="Enter Phone" library="RegistrationKeywords">
+<arguments>
+<arg>9876543212</arg>
+</arguments>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Page Should Contain Element</arg>
+<arg>${txt_phone}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${txt_phone}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.581" level="INFO">Current page contains element 'name:phone'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.573" endtime="20191218 01:44:07.581"></status>
+</kw>
+<msg timestamp="20191218 01:44:07.581" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191218 01:44:07.573" endtime="20191218 01:44:07.581"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='True'</arg>
+<arg>Input Text</arg>
+<arg>${txt_phone}</arg>
+<arg>${phone}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_phone}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.583" level="INFO">Typing text '9876543212' into text field 'name:phone'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.583" endtime="20191218 01:44:07.617"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.582" endtime="20191218 01:44:07.617"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_phone}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191218 01:44:07.639" level="INFO">${val} = 9876543212</msg>
+<status status="PASS" starttime="20191218 01:44:07.618" endtime="20191218 01:44:07.639"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${val}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.640" level="INFO">9876543212</msg>
+<status status="PASS" starttime="20191218 01:44:07.640" endtime="20191218 01:44:07.641"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${val}</arg>
+</arguments>
+<status status="PASS" starttime="20191218 01:44:07.641" endtime="20191218 01:44:07.642"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.572" endtime="20191218 01:44:07.642"></status>
+</kw>
+<kw name="Enter Email" library="RegistrationKeywords">
+<arguments>
+<arg>abir31@gmail.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_email}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.645" level="INFO">Typing text 'abir31@gmail.com' into text field 'name:userName'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.645" endtime="20191218 01:44:07.689"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.643" endtime="20191218 01:44:07.689"></status>
+</kw>
+<kw name="Enter Address1" library="RegistrationKeywords">
+<arguments>
+<arg>22 Camac Street</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_add1}</arg>
+<arg>${address1}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.692" level="INFO">Typing text '22 Camac Street' into text field 'name:address1'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.692" endtime="20191218 01:44:07.724"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.691" endtime="20191218 01:44:07.724"></status>
+</kw>
+<kw name="Enter Address2" library="RegistrationKeywords">
+<arguments>
+<arg>13 Lane</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_add2}</arg>
+<arg>${address2}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.726" level="INFO">Typing text '13 Lane' into text field 'name:address2'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.726" endtime="20191218 01:44:07.750"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.725" endtime="20191218 01:44:07.750"></status>
+</kw>
+<kw name="Enter City" library="RegistrationKeywords">
+<arguments>
+<arg>Kolkata</arg>
+</arguments>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${txt_phone}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_phone}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.769" level="INFO">Element 'name:phone' is displayed.</msg>
+<status status="PASS" starttime="20191218 01:44:07.752" endtime="20191218 01:44:07.769"></status>
+</kw>
+<msg timestamp="20191218 01:44:07.769" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191218 01:44:07.752" endtime="20191218 01:44:07.769"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='True'</arg>
+<arg>Input Text</arg>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.770" level="INFO">Typing text 'Kolkata' into text field 'name:city'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.770" endtime="20191218 01:44:07.797"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.770" endtime="20191218 01:44:07.797"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${txt_city}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191218 01:44:07.811" level="INFO">${val} = city</msg>
+<status status="PASS" starttime="20191218 01:44:07.798" endtime="20191218 01:44:07.811"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.751" endtime="20191218 01:44:07.811"></status>
+</kw>
+<kw name="Enter State" library="RegistrationKeywords">
+<arguments>
+<arg>West Bengal</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.813" level="INFO">Typing text 'West Bengal' into text field 'name:state'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.813" endtime="20191218 01:44:07.838"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.812" endtime="20191218 01:44:07.838"></status>
+</kw>
+<kw name="Enter Postcode" library="RegistrationKeywords">
+<arguments>
+<arg>700067</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_postCode}</arg>
+<arg>${Postcode}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.839" level="INFO">Typing text '700067' into text field 'name:postalCode'.</msg>
+<status status="PASS" starttime="20191218 01:44:07.839" endtime="20191218 01:44:07.865"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.838" endtime="20191218 01:44:07.865"></status>
+</kw>
+<kw name="Select Country" library="RegistrationKeywords">
+<arguments>
+<arg>INDIA</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${drp_country}</arg>
+<arg>${country}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:07.867" level="INFO">Selecting options from selection list 'name:country' by label INDIA.</msg>
+<status status="PASS" starttime="20191218 01:44:07.867" endtime="20191218 01:44:08.121"></status>
+</kw>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<arguments>
+<arg>${drp_country}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191218 01:44:08.902" level="INFO">${val} = INDIA</msg>
+<status status="PASS" starttime="20191218 01:44:08.122" endtime="20191218 01:44:08.902"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${val}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:08.903" level="INFO">INDIA</msg>
+<status status="PASS" starttime="20191218 01:44:08.903" endtime="20191218 01:44:08.903"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${country}</arg>
+<arg>${val}</arg>
+</arguments>
+<status status="PASS" starttime="20191218 01:44:08.903" endtime="20191218 01:44:08.904"></status>
+</kw>
+<kw name="Get List Items" library="SeleniumLibrary">
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<arguments>
+<arg>${drp_country}</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191218 01:44:10.485" level="INFO">${val} = ['ALBANIA', 'ALGERIA', 'AMERICAN SAMOA', 'ANDORRA', 'ANGOLA', 'ANGUILLA', 'ANTARCTICA', 'ANTIGUA AND BARBUDA', 'ARGENTINA', 'ARMENIA', 'ARUBA', 'ASHMORE AND CARTIER ISLANDS', 'AUSTRALIA', 'AUSTRIA', '...</msg>
+<status status="PASS" starttime="20191218 01:44:08.904" endtime="20191218 01:44:10.485"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${val}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:10.486" level="INFO">['ALBANIA', 'ALGERIA', 'AMERICAN SAMOA', 'ANDORRA', 'ANGOLA', 'ANGUILLA', 'ANTARCTICA', 'ANTIGUA AND BARBUDA', 'ARGENTINA', 'ARMENIA', 'ARUBA', 'ASHMORE AND CARTIER ISLANDS', 'AUSTRALIA', 'AUSTRIA', 'AZERBAIJAN', 'BAHAMAS', 'BAHRAIN', 'BAKER ISLAND', 'BANGLADESH', 'BARBADOS', 'BASSA DE INDIA', 'BELARUS', 'BELGIUM', 'BELIZE', 'BENIN', 'BERMUDA', 'BHUTAN', 'BOLIVIA', 'BOSNIA AND HERZEGOVINA', 'BOTSWANA', 'BOUVET ISLAND', 'BRAZIL', 'BRITISH INDIAN OCEAN TERRITORY', 'BRITISH VIRGIN ISLANDS', 'BRUNEI', 'BULGARIA', 'BURKINA FASO', 'BURMA', 'BURUNDI', 'CAMBODIA', 'CAMEROON', 'CANADA', 'CAPE VERDE', 'CAYMAN ISLANDS', 'CENTRAL AFRICAN REPUBLIC', 'CHAD', 'CHILE', 'CHINA', 'CHRISTMAS ISLAND', 'CLIPPERTON ISLAND', 'COCOS (KEELING) ISLANDS', 'COLOMBIA', 'COMOROS', 'CONGO', 'COOK ISLANDS', 'CORAL SEA ISLANDS', 'COSTA RICA', "COTE D'IVOIRE", 'CROATIA', 'CUBA', 'CYPRUS', 'CZECH REPUBLIC', 'DENMARK', 'DJIBOUTI', 'DOMINICA', 'DOMINICAN REPUBLIC', 'ECUADOR', 'EGYPT', 'EL SALVADOR', 'EQUATORIAL GUINEA', 'ERITREA', 'ESTONIA', 'ETHIOPIA', 'EUROPA ISLAND', 'FALKLAND ISLANDS', 'FAROE ISLANDS', 'FIJI', 'FINLAND', 'FRANCE', 'FRENCH GUIANA', 'FRENCH POLYNESIA', 'FRENCH SOUTHERN AND ANTARCTIC LANDS', 'GABON', 'GAMBIA, THE', 'GAZA STRIP', 'GEORGIA', 'GERMANY', 'GHANA', 'GIBRALTAR', 'GLORIOSO ISLANDS', 'GREECE', 'GREENLAND', 'GRENADA', 'GUADELOUPE', 'GUAM', 'GUATEMALA', 'GUERNSEY', 'GUINEA', 'GUINEA-BISSAU', 'GUYANA', 'HAITI', 'HEARD ISLAND AND MCDONALD ISLANDS', 'HONDURAS', 'HONG KONG', 'HOWLAND ISLAND', 'HUNGARY', 'ICELAND', 'INDIA', 'INDONESIA', 'IRAN', 'IRAQ', 'IRELAND', 'ISRAEL', 'ITALY', 'JAMAICA', 'JAN MAYEN', 'JAPAN', 'JARVIS ISLAND', 'JERSEY', 'JOHNSTON ATOLL', 'JORDAN', 'JUAN DE NOVA ISLAND', 'KAZAKHSTAN', 'KENYA', 'KINGMAN REEF', 'KIRIBATI', "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF", 'KOREA, REPUBLIC OF', 'KUWAIT', 'KYRGYZSTAN', 'LAOS', 'LATVIA', 'LEBANON', 'LESOTHO', 'LIBERIA', 'LIBYA', 'LIECHTENSTEIN', 'LITHUANIA', 'LUXEMBOURG', 'MACAU', 'MACEDONIA, FORMER REPUBLIC OF', 'MADAGASCAR', 'MALAWI', 'MALAYSIA', 'MALDIVES', 'MALI', 'MALTA', 'MAN, ISLE OF', 'MARSHALL ISLANDS', 'MARTINIQUE', 'MAURITANIA', 'MAURITIUS', 'MAYOTTE', 'MEXICO', 'MICRONESIA', 'MIDWAY ISLANDS', 'MOLDOVA', 'MONACO', 'MONGOLIA', 'MONTENEGRO', 'MONTSERRAT', 'MOROCCO', 'MOZAMBIQUE', 'NAMIBIA', 'NAURU', 'NAVASSA ISLAND', 'NEPAL', 'NETHERLANDS', 'NETHERLANDS ANTILLES', 'NEW CALEDONIA', 'NEW ZEALAND', 'NICARAGUA', 'NIGER', 'NIGERIA', 'NIUE', 'NO MANS LAND', 'NORFOLK ISLAND', 'NORTHERN MARIANA ISLANDS', 'NORWAY', 'OCEANS', 'OMAN', 'PAKISTAN', 'PALMYRA ATOLL', 'PANAMA', 'PAPUA NEW GUINEA', 'PARACEL ISLANDS', 'PARAGUAY', 'PERU', 'PHILIPPINES', 'PITCAIRN ISLANDS', 'POLAND', 'PORTUGAL', 'PUERTO RICO', 'QATAR', 'REUNION', 'ROMANIA', 'RUSSIA', 'RWANDA', 'SAN MARINO', 'SAO TOME AND PRINCIPE', 'SAUDI ARABIA', 'SENEGAL', 'SERBIA', 'SEYCHELLES', 'SIERRA LEONE', 'SINGAPORE', 'SLOVAKIA', 'SLOVENIA', 'SOLOMON ISLANDS', 'SOMALIA', 'SOUTH AFRICA', 'SOVIET UNION', 'SPAIN', 'SPRATLY ISLANDS', 'SRI LANKA', 'ST. HELENA', 'ST. KITTS AND NEVIS', 'ST. LUCIA', 'ST. PIERRE AND MIQUELON', 'ST. VINCENT AND THE GRENADINES', 'SUDAN', 'SURINAME', 'SVALBARD', 'SWAZILAND', 'SWEDEN', 'SWITZERLAND', 'SYRIA', 'TAIWAN', 'TAJIKISTAN', 'TANZANIA, UNITED REPUBLIC OF', 'THAILAND', 'TOGO', 'TOKELAU', 'TONGA', 'TRINIDAD AND TOBAGO', 'TROMELIN ISLAND', 'TUNISIA', 'TURKEY', 'TURKMENISTAN', 'TURKS AND CAICOS ISLANDS', 'TUVALU', 'UGANDA', 'UKRAINE', 'UNDERSEA FEATURES', 'UNITED ARAB EMIRATES', 'UNITED KINGDOM', 'UNITED STATES', 'URUGUAY', 'UZBEKISTAN', 'VANUATU', 'VATICAN CITY', 'VENEZUELA', 'VIETNAM', 'VIRGIN ISLANDS', 'WAKE ISLAND', 'WALLIS AND FUTUNA', 'WEST BANK', 'WESTERN SAHARA', 'WESTERN SAMOA', 'YEMEN', 'YUGOSLAVIA', 'ZAIRE', 'ZAMBIA', 'ZIMBABWE']</msg>
+<status status="PASS" starttime="20191218 01:44:10.485" endtime="20191218 01:44:10.486"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:07.866" endtime="20191218 01:44:10.486"></status>
+</kw>
+<kw name="Enter Username" library="RegistrationKeywords">
+<arguments>
+<arg>abir31</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_userName}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:10.488" level="INFO">Typing text 'abir31' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20191218 01:44:10.487" endtime="20191218 01:44:10.508"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:10.487" endtime="20191218 01:44:10.508"></status>
+</kw>
+<kw name="Enter password" library="RegistrationKeywords">
+<arguments>
+<arg>test123</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:10.510" level="INFO">Typing password into text field 'name:password'.</msg>
+<status status="PASS" starttime="20191218 01:44:10.510" endtime="20191218 01:44:10.530"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:10.509" endtime="20191218 01:44:10.530"></status>
+</kw>
+<kw name="Enter Confirmed password" library="RegistrationKeywords">
+<arguments>
+<arg>test123</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_conformedPassword}</arg>
+<arg>${confpassword}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:10.532" level="INFO">Typing password into text field 'name:confirmPassword'.</msg>
+<status status="PASS" starttime="20191218 01:44:10.532" endtime="20191218 01:44:10.551"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:10.531" endtime="20191218 01:44:10.551"></status>
+</kw>
+<kw name="Click Submit" library="RegistrationKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit}</arg>
+</arguments>
+<msg timestamp="20191218 01:44:10.553" level="INFO">Clicking button 'xpath://input[@name='register']'.</msg>
+<status status="PASS" starttime="20191218 01:44:10.553" endtime="20191218 01:44:12.214"></status>
+</kw>
+<status status="PASS" starttime="20191218 01:44:10.552" endtime="20191218 01:44:12.215"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Thank you for registering.</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20191218 01:44:12.216" endtime="20191218 01:44:12.235"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20191218 01:44:14.237" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191218 01:44:12.236" endtime="20191218 01:44:14.238"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191218 01:44:14.241" endtime="20191218 01:44:16.681"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191218 01:44:16.682" endtime="20191218 01:44:16.682"></status>
+</kw>
+<doc>Test case to perform the registration process</doc>
+<status status="PASS" starttime="20191218 01:43:45.701" endtime="20191218 01:44:16.682" critical="yes"></status>
+</test>
+<doc>Registering in the application
+</doc>
+<status status="PASS" starttime="20191218 01:43:45.694" endtime="20191218 01:44:16.685"></status>
+</suite>
+<status status="PASS" starttime="20191218 01:43:25.103" endtime="20191218 01:44:16.688"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" id="s1-s1" name="LoginTest">TestCases.LoginTest</stat>
+<stat pass="1" fail="0" id="s1-s2" name="RegistrationTest">TestCases.RegistrationTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

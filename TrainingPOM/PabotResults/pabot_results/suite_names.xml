@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2.1 (Python 3.7.2 on win32)" generated="20191220 00:51:29.931" rpa="false">
+<suite id="s1" name="TestCases" source="D:\workspace1\TrainingPOM\TestCases">
+<suite id="s1-s1" name="LoginTest" source="D:\workspace1\TrainingPOM\TestCases\LoginTest.robot">
+<test id="s1-s1-t1" name="LoginTest">
+<kw name="Open my browser" library="LoginKeywords" type="setup">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.891" endtime="20191220 00:51:30.891"></status>
+</kw>
+<status status="PASS" starttime="20191220 00:51:30.890" endtime="20191220 00:51:30.891"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.892" endtime="20191220 00:51:30.892"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.892" endtime="20191220 00:51:30.892"></status>
+</kw>
+<status status="PASS" starttime="20191220 00:51:30.890" endtime="20191220 00:51:30.892" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191220 00:51:29.947" endtime="20191220 00:51:30.893"></status>
+</suite>
+<suite id="s1-s2" name="RegistrationDataDriven" source="D:\workspace1\TrainingPOM\TestCases\RegistrationDataDriven.robot">
+<test id="s1-s2-t1" name="TC1">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.902" endtime="20191220 00:51:30.902"></status>
+</kw>
+<status status="PASS" starttime="20191220 00:51:30.901" endtime="20191220 00:51:30.902" critical="yes"></status>
+</test>
+<doc>Registering in the application
+
+</doc>
+<status status="PASS" starttime="20191220 00:51:30.893" endtime="20191220 00:51:30.902"></status>
+</suite>
+<suite id="s1-s3" name="RegistrationTest" source="D:\workspace1\TrainingPOM\TestCases\RegistrationTest.robot">
+<test id="s1-s3-t1" name="Registration Test">
+<kw name="Open my browser" library="LoginKeywords" type="setup">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.910" endtime="20191220 00:51:30.910"></status>
+</kw>
+<status status="PASS" starttime="20191220 00:51:30.910" endtime="20191220 00:51:30.910"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.911" endtime="20191220 00:51:30.911"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT_RUN" starttime="20191220 00:51:30.911" endtime="20191220 00:51:30.911"></status>
+</kw>
+<doc>Test case to perform the registration process</doc>
+<status status="PASS" starttime="20191220 00:51:30.909" endtime="20191220 00:51:30.911" critical="yes"></status>
+</test>
+<doc>Registering in the application
+</doc>
+<status status="PASS" starttime="20191220 00:51:30.902" endtime="20191220 00:51:30.912"></status>
+</suite>
+<status status="PASS" starttime="20191220 00:51:29.931" endtime="20191220 00:51:30.912"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" id="s1-s1" name="LoginTest">TestCases.LoginTest</stat>
+<stat pass="1" fail="0" id="s1-s2" name="RegistrationDataDriven">TestCases.RegistrationDataDriven</stat>
+<stat pass="1" fail="0" id="s1-s3" name="RegistrationTest">TestCases.RegistrationTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
