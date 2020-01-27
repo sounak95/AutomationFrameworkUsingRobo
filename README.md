@@ -1,3 +1,3 @@
 # AutomationFrameworkUsingRobot
 
-Automation framework development using Robot framework and Selenium library
+Sample Automation framework using python Robot framework and Selenium library
